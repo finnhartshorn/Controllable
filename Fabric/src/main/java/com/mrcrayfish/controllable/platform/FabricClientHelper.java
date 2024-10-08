@@ -91,7 +91,7 @@ public class FabricClientHelper implements IClientHelper
     @Override
     public List<NavigationPoint> getJeiNavigationPoints()
     {
-        if(!FabricLoader.getInstance().isModLoaded("jei"))
+        if(!FabricLoader.getInstance().isModLoaded("jei") || FabricLoader.getInstance().isModLoaded("emi"))
             return Collections.emptyList();
         return JeiSupport.getNavigationPoints();
     }
