@@ -139,7 +139,7 @@ public class ForgeClientHelper implements IClientHelper
     @Override
     public List<NavigationPoint> getJeiNavigationPoints()
     {
-        if(!ModList.get().isLoaded("jei"))
+        if(!ModList.get().isLoaded("jei") || ModList.get().isLoaded("emi"))
             return Collections.emptyList();
         return JeiSupport.getNavigationPoints();
     }
